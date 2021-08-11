@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Vue父子组件的双向绑定</title>
+      <link href="posts/2485.html"/>
+      <url>posts/2485.html</url>
+      
+        <content type="html"><![CDATA[<ol><li>父组件<template><div class="home"> <innput v-model="vvv"></innput> //自定义组件，使用v-model实现双向绑定 <div>子组件</div> //子组件改变，父组件对应跟着改变</div></template></li></ol><script>import Innput from '../components/input.vue';export default {  name: 'Home',  components: {    Innput  },  data() {    return {      vvv: 123    }  }}</script><ol start="2"><li>子组件<template><div>   <input type="text" v-model="newValue"> //绑定计算属性</div></template></li></ol><script>export default {    props: {        value: {                type: Number,                default: () => 0                }    },    computed: {        newValue:{            get() {                return Number(this.value)            },            set(val) {                this.$emit('input', Number(val))            }        }    }}</script><ol start="3"><li>方法总结:<br>父组件通过v-model绑定一个变量传给子组件<br>子组件通过props[‘value’]接收<br>子组件通过$emit(‘input’,XX）去改变父组件中v-model绑定的变量</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> Blog </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> blog </tag>
+            
+            <tag> hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>部署教程</title>
       <link href="posts/2483.html"/>
       <url>posts/2483.html</url>
