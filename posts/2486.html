@@ -1,0 +1,440 @@
+<!DOCTYPE HTML><html lang="zh-CN"><head><meta charset="utf-8"><meta name="keywords" content="Hexo"><meta name="description" content="sola是一个记录生活,分享知识的个人博客。主要记录生活的点点滴滴,分享学习上的经验知识,以求在茫茫人海中留下些许足迹。"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><meta name="renderer" content="webkit|ie-stand|ie-comp"><meta name="mobile-web-app-capable" content="yes"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><title>JS高频代码 | 热爱生活 | sola | sola Blog</title><link rel="icon" type="image/jpeg" href="/medias/detail/tx.jpg"><link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css"><link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css"><link rel="stylesheet" type="text/css" href="/libs/aos/aos.css"><link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css"><link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css"><link rel="stylesheet" type="text/css" href="/css/islu.css"><link rel="stylesheet" type="text/css" href="/css/my.css"><link rel="stylesheet" type="text/css" href="/css/loading.css"><link rel="stylesheet" type="text/css" href="/css/dark.css"><script src="/libs/jquery/jquery.min.js"></script><meta name="generator" content="Hexo 5.4.0"><style>.github-emoji{position:relative;display:inline-block;width:1.2em;min-height:1.2em;overflow:hidden;vertical-align:top;color:transparent}.github-emoji>span{position:relative;z-index:10}.github-emoji .fancybox,.github-emoji img{margin:0!important;padding:0!important;border:none!important;outline:0!important;text-decoration:none!important;user-select:none!important;cursor:auto!important}.github-emoji img{height:1.2em!important;width:1.2em!important;position:absolute!important;left:50%!important;top:50%!important;transform:translate(-50%,-50%)!important;user-select:none!important;cursor:auto!important}.github-emoji-fallback{color:inherit}.github-emoji-fallback img{opacity:0!important}</style></head><body><div id="loading-container"><p class="loading-text">嘘 ~ 正在从服务器偷取页面 . . .</p><div class="loading-image"><div></div><div></div><div></div><div></div><div></div><div></div></div></div><script>setTimeout(function(){const e=document.getElementById("loading-container");e.className="fadeout",setTimeout(function(){e.style.display="none"},500)},500)</script><header class="navbar-fixed"><nav id="headNav" class="bg-color nav-transparent"><div id="navContainer" class="nav-wrapper container"><div class="brand-logo"><a href="/" class="waves-effect waves-light"><div><img src="/medias/detail/tx.jpg" class="logo-img" alt="LOGO"> <span class="logo-span">sola</span></div></a></div><a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a><ul class="right nav-menu"><li class="hide-on-med-and-down nav-item"><a href="/" class="waves-effect waves-light"><i class="fas fa-home" style="zoom:.6"></i> <span>首页</span></a></li><li class="hide-on-med-and-down nav-item"><a href="/categories" class="waves-effect waves-light"><i class="fas fa-book" style="zoom:.6"></i> <span>文章分类</span></a></li><li class="hide-on-med-and-down nav-item"><a href="/archives" class="waves-effect waves-light"><i class="fas fa-archive" style="zoom:.6"></i> <span>文章归档</span></a></li><li class="hide-on-med-and-down nav-item"><a href="/about" class="waves-effect waves-light"><i class="fas fa-heartbeat" style="zoom:.6"></i> <span>关于博主</span></a></li><li class="hide-on-med-and-down nav-item"><a href="/navigate" class="waves-effect waves-light"><i class="fas fa-location-arrow" style="zoom:.6"></i> <span>常用网站</span></a></li><li><a href="#searchModal" class="modal-trigger waves-effect waves-light"><i id="searchIcon" class="fas fa-search" title="搜索" style="zoom:.85"></i></a></li><li id="fullscreen_li" class="fullscreen"><a href="javascript:void(0);" class="modal-trigger waves-effect waves-light"><i id="fullscreen" class="fa fa-expand-arrows-alt" title="全屏" style="zoom:.65"></i></a></li></ul><div id="mobile-nav" class="side-nav sidenav"><div class="mobile-head bg-color"><img src="/medias/detail/tx.jpg" class="logo-img circle responsive-img"><div class="logo-name">热爱生活 | sola | sola Blog</div><div class="logo-desc">sola是一个记录生活,分享知识的个人博客。主要记录生活的点点滴滴,分享学习上的经验知识,以求在茫茫人海中留下些许足迹。</div></div><ul class="menu-list mobile-menu-list"><li class="m-nav-item"><a href="/" class="waves-effect waves-light">首页</a></li><li class="m-nav-item"><a href="/categories" class="waves-effect waves-light">文章分类</a></li><li class="m-nav-item"><a href="/archives" class="waves-effect waves-light">文章归档</a></li><li class="m-nav-item"><a href="/about" class="waves-effect waves-light">关于博主</a></li><li class="m-nav-item"><a href="/navigate" class="waves-effect waves-light">常用网站</a></li></ul></div></div></nav></header><div class="bg-cover pd-header post-cover" style="background-image:url(/medias/article/n2.jpg)"><div class="container" style="right:0;left:0"><div class="row"><div class="col s12 m12 l12"><div class="brand"><h1 class="description center-align post-title">JS高频代码</h1></div></div></div></div></div><main class="post-container content"><link rel="stylesheet" href="/libs/tocbot/tocbot.css"><link rel="stylesheet" type="text/css" href="/css/detail/post-detail-toc.css"><div class="row"><div id="main-content" class="col s12 m12 l9"><div id="artDetail"><div class="card"><div class="card-content article-info"><div class="row tag-cate"><div class="col s7"><div class="article-tag"><a href="/tags/blog/"><span class="chip bg-color">blog</span> </a><a href="/tags/hexo/"><span class="chip bg-color">hexo</span></a></div></div><div class="col s5 right-align"><div class="post-cate"><i class="fas fa-bookmark fa-fw icon-category"></i> <a href="/categories/Blog/" class="post-category">Blog</a></div></div></div><div class="post-info"><div class="post-date info-break-policy"><i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp; <span id="publishDate">2021-08-11</span></div><div class="info-break-policy"><i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp; 3.2k</div><div class="info-break-policy"><i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp; 14 分</div></div></div><hr class="clearfix"><div class="uk-alert"><p id="thisTime"><span id="timeLag"></span></p></div><script>let date1=new Date(document.getElementById("publishDate").innerHTML),date2=new Date,date3=date2.getTime()-date1.getTime(),days=Math.floor(date3/864e5),thisTime=document.getElementById("thisTime"),timeLag=document.getElementById("timeLag");days<=7?(thisTime.classList.add("uk-alert-success"),timeLag.innerText="该文章发布于"+days+"天前~热乎中~请放心食用~"):7<days&&days<=30?(thisTime.classList.add("uk-alert-warning"),timeLag.innerText="该文章发布于"+days+"天前~快凉了~请尽快食用~"):(thisTime.classList.add("uk-alert-danger"),timeLag.innerText="该文章发布于"+days+"天前~已经凉了~请加热后食用~")</script><link rel="stylesheet" href="/"><style type="text/css">code[class*=language-],pre[class*=language-]{white-space:pre-wrap!important}</style><div class="card-content article-card-content"><div id="articleContent"><ol><li><p>解析 url 参数：<br>就是提出 url 里的参数并转成对象</p><pre class="line-numbers language-none"><div class="caption"><span>[title] [lang:language] [url] [link text]</span></div><code class="language-none">&lt;script&gt;
+  function getUrlParams(url){
+  let reg = /([^?&amp;=]+)=([^?&amp;=]+)/g
+  let obj = { }
+  url.replace(reg, function(){
+      obj[arguments[1]] = arguments[2]
+  })
+  return obj
+}
+let url = 'https://www.junjin.cn?a=1&amp;b=2'
+console.log(getUrlParams(url)) // { a: 1, b: 2 }
+&lt;/script&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li><li><p>call<br>改变 this 指向用的，可以接收多个参数</p><pre class="line-numbers language-none"><div class="caption"><span>[title] [lang:language] [url] [link text]</span></div><code class="language-none">&lt;script&gt;
+Function.prototype.myCall = function(ctx) {
+  ctx = ctx || window // ctx 就是 obj
+  let fn = Symbol()
+  ctx[fn] = this // this 就是 foo
+  let result = ctx[fn](...arguments)
+  delete ctx[fn]
+  return result
+}
+let obj = { name: sola }
+function foo(){ return this.name }
+// 就是把 foo 函数里的 this 指向，指向 obj
+console.log( foo.myCall(obj) ) // sola
+&lt;/script&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>用 Symbol 是因为他是独一无二的，避免和 obj 里的属性重名<br>原理就是把 foo 添加到 obj 里，执行 foo 拿到返回值，再从 obj 里把 foo 删掉</p></li><li><p>apply:<br>原理同上，只不过 apply 接收第二个参数是数组，不支持第三个参数</p><pre class="line-numbers language-none"><div class="caption"><span>[title] [lang:language] [url] [link text]</span></div><code class="language-none">&lt;script&gt;
+Function.prototype.myApply = function(ctx) {
+  ctx = ctx || window
+  let fn = Symbol()
+  ctx[fn] = this
+  let result
+  if (arguments[1]) {
+  result = ctx[fn](...arguments[1])
+  } else {
+  result = ctx[fn]()
+  }
+  delete ctx[fn]
+  return result
+}
+&lt;/script&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li><li><p>bind:</p><pre class="line-numbers language-none"><div class="caption"><span>[title] [lang:language] [url] [link text]</span></div><code class="language-none">&lt;script&gt;
+Function.prototype.myBind = function (ctx) {
+  const self = this
+  const fn = function(){}
+  const bind = function(){
+    const _this = this instanceof fn ? this : ctx
+    return self.apply(_this, [...args, ...arguments])
+  }
+  fn.prototype = this.prototype
+  bind.prototype = new fn()
+  return bind
+}
+&lt;/script&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>bind 不会立即执行，会返回一个函数</p></li></ol><p>函数可以直接执行并且传参，如 foo.myBind(obj, 1)(2, 3)，所以需要 [ …args, …arguments ]合并参数<br>函数也可以 new，所以要判断原型 this instanceof fn,然后实现原型继承.</p><p>call、apply、bind的区别<br>都可以改变 this 指向<br>call 和 apply 会立即执行，bind 不会，而是返回一个函数<br>call 和 bind 可以接收多个参数，apply 只能接受两个，第二个是数组<br>bind 参数可以分多次传入</p><ol start="5"><li><p>instanceof:<br>说明在注释里，接受两个参数，判断第二个参数是不是在第一个参数的原型链上</p><pre class="line-numbers language-none"><div class="caption"><span>[title] [lang:language] [url] [link text]</span></div><code class="language-none">&lt;script&gt;
+function myInstanceof(left, right) {
+  // 获得实例对象的原型 也就是 left.__proto__
+  let left = Object.getPrototypeOf(left)
+  // 获得构造函数的原型
+  let prototype = right.prototype
+  // 判断构造函数的原型 是不是 在实例的原型链上
+  while (true) {
+    // 原型链一层层向上找，都没找到 最终会为 null
+    if (left === null) return false
+    if (prototype === left) return true
+    // 没找到就把上一层拿过来，继续循环，再向上一层找
+    left = Object.getPrototypeOf(left)
+  }
+}
+&lt;/script&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li><li><p>数组去重:</p><pre class="line-numbers language-none"><div class="caption"><span>[title] [lang:language] [url] [link text]</span></div><code class="language-none">&lt;script&gt;
+// 来个示例数组
+let arr = [1, 1, "1", "1", true, true, "true", {}, {}, "{}", null, null, undefined, undefined]
+
+// 方法一
+let unique1 = Array.from(new Set(arr))
+console.log(unique1) // [1, "1", true, "true", {}, {}, "{}", null, undefined]
+
+// 方法二
+let unique2 = arr =&gt; {
+  let map = new Map() // 或者用空对象 let obj =｛｝利用对象属性不能重复的特性
+  let brr = []
+  arr.forEach( item =&gt; {
+    if(!map.has(item)){ // 如果是对象的话就判断 !obj[item]
+      map.set(item, true) // 如果是对象的话就 obj[item] = true  其他一样
+      brr.push(item)
+    }
+  })
+  return brr
+}
+console.log(unique2(arr)) // [1, "1", true, "true", {}, {}, "{}", null, undefined]
+
+// 方法三
+let unique3 = arr =&gt; {
+  let brr = []
+  arr.forEach(item =&gt; {
+    // 使用 indexOf  返回数组是否包含某个值 没有就返回 -1 有就返回下标
+    if(brr.indexOf(item) === -1) brr.push(item)
+    // 或者使用 includes 返回数组是否包含某个值  没有就返回false  有就返回true
+    if(!brr.includes(item)) brr.push(item)
+  })
+  return brr
+}
+console.log(unique3(arr)) // [1, "1", true, "true", {}, {}, "{}", null, undefined]
+
+// 方法四
+let unique4 = arr =&gt; {
+  // 使用 filter 返回符合条件的集合
+  let brr = arr.filter((item, index) =&gt; {
+    return arr.indexOf(item) === index
+  })
+  return brr
+}
+console.log(unique4(arr)) // [1, "1", true, "true", {}, {}, "{}", null, undefined]
+&lt;/script&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>上面的方法不能对引用类型去重，除非指针一样，指针是可以去重的，比如下面这样是可以去重的</p><pre class="line-numbers language-none"><div class="caption"><span>[title] [lang:language] [url] [link text]</span></div><code class="language-none">&lt;script&gt;
+let crr = []
+let arr = [crr,crr]
+&lt;/script&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></li><li><p>数组扁平化:<br>就是把多维数组变成一维数组</p><pre class="line-numbers language-none"><div class="caption"><span>[title] [lang:language] [url] [link text]</span></div><code class="language-none">&lt;script&gt;
+// 来个示例数组
+let arr = [1, [2, [3, [4, [5]]]]]
+
+// 方法一
+// flat() 默认拉平一层嵌套数组，传入数字几就拉平几层
+// Infinity 是无穷大，不管嵌套多少层都给你拉平
+let brr1 = arr.flat(Infinity)
+console.log(brr1) // [1, 2, 3, 4, 5]
+
+// 方法二
+// 转成字符串，再去掉字符串里的 “[” 和 “]”，再把字符串转回数组
+let brr2 = JSON.parse( "[" + JSON.stringify(arr).replace(/\[|\]/g, "") + "]")
+console.log(brr2) // [1, 2, 3, 4, 5]
+
+// 方法三
+let brr3 = arr =&gt; {
+  // 用递归，用 for 循环加递归也可以，这里用 reduce
+  // reduce 累计器，本质上也是循环，
+  // cur 是循环的当前一个值，相当于 for循环里的arr[i]， pre 是前一个值，相当于for循环里的arr[i-1]
+  let crr = arr.reduce((pre, cur) =&gt; {
+    return pre.concat(Array.isArray(cur) ? brr3(cur) : cur);
+  }, [])
+  return crr
+}
+console.log(brr3(arr)) // [1, 2, 3, 4, 5]
+&lt;/script&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li><li><p>防抖:<br>连续点击的情况下不会执行，只在最后一下点击过指定的秒数后才会执行<br>应用场景：点击按钮，输入框模糊查询，词语联想等</p><pre class="line-numbers language-none"><div class="caption"><span>[title] [lang:language] [url] [link text]</span></div><code class="language-none">&lt;script&gt;
+function debounce(fn, wait) {
+  let timeout = null
+  return function(){
+    // 每一次点击判断有延迟执行的任务就停止
+    if(timeout !== null) clearTimeout(timeout)
+    // 否则就开启延迟任务
+    timeout = setTimeout(fn, wait)
+  }
+}
+function sayDebounce() {
+  console.log("防抖成功！")
+}
+btn.addEventListener("click", debounce(sayDebounce,1000))
+&lt;/script&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li><li><p>节流:<br>频繁触发的时候，比如滚动或连续点击，在指定的间隔时间内，只会执行一次<br>应用场景：点击按钮，监听滚动条，懒加载等</p><pre class="line-numbers language-none"><div class="caption"><span>[title] [lang:language] [url] [link text]</span></div><code class="language-none">&lt;script&gt;
+// 方案1  连续点击的话，每过 wait 秒执行一次
+function throttle(fn, wait) {
+  let bool = true
+  return function() {
+    if(!bool) return
+    bool = false
+    setTimeout(() =&gt; {
+      // fn() // fn中this指向window
+      fn.call(this, arguments) // fn中this指向btn  下面同理
+      btn = true
+    }, wait)
+  }
+}
+// 方案2 连续点击的话，第一下点击会立即执行一次 然后每过 wait 秒执行一次
+function throttle(fn, wait) {
+  let date = Date.now()
+  return function() {
+    let now = Date.now()
+    // 用当前时间 减去 上一次点击的时间 和 传进来的时间作对比
+    if (now - date &gt; wait) {
+      fn.call(this, arguments)
+      date = now
+    }
+  }
+}
+function sayThrottle() {
+  console.log("节流成功！")
+}
+btn.addEventListener("click", throttle(sayThrottle,1000))
+&lt;/script&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li><li><p>new:</p><pre class="line-numbers language-none"><div class="caption"><span>[title] [lang:language] [url] [link text]</span></div><code class="language-none">&lt;script&gt;
+function myNew(fn,...args){
+  // 不是函数不能 new
+  if(typeof fn !== "function"){
+    throw new Error('TypeError')
+  }
+  // 创建一个继承 fn 原型的对象
+  const newObj = Object.create(fn.prototype);
+  // 将 fn 的 this 绑定给新对象，并继承其属性，然后获取返回结果
+  const result = fn.apply(newObj, args);
+  // 根据 result 对象的类型决定返回结果
+  return result &amp;&amp; (typeof result === "object" || typeof result == "function") ? result : newObj;
+} 
+&lt;/script&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li><li><p>Object.create:</p><pre class="line-numbers language-none"><div class="caption"><span>[title] [lang:language] [url] [link text]</span></div><code class="language-none">&lt;script&gt;
+function createObj(obj){
+  function Fn(){}
+  Fn.prototype = obj
+  return new Fn()
+}
+&lt;/script&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>创建一个空对象并修改原型，这没啥说的，一般传个 null 进去，这样创建出来没有原型的对象不会被原型污染，或者传要继承的对象原型</p></li><li><p>Es5 继承:</p><pre class="line-numbers language-none"><div class="caption"><span>[title] [lang:language] [url] [link text]</span></div><code class="language-none">&lt;script&gt;
+// 创建一个父类
+function Parent(){}
+Parent.prototype.getName = function(){ return '沐华' }
+// 子类
+function Child(){}
+
+// 方式一
+Child.prototype = Object.create(Parent.prototype)
+Child.prototype.constructor = Child // 重新指定 constructor
+// 方式二
+Child.prototype = Object.create(Parent.prototype，{
+  constructor:{
+    value: Child,
+    writable: true, // 属性能不能修改
+    enumerable: true, // 属性能不能枚举(可遍历性)，比如在 for in/Object.keys/JSON.stringify
+    configurable: true, // 属性能不能修改属性描述对象和能否删除
+  }
+})
+
+console.log(new Child().getName) // 沐华
+&lt;/script&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>ES5 的继承方式有很多种，什么原型链继承、组合继承、寄生式继承…等等，了解一种面试就够用了</p></li><li><p>Es6 继承:</p><pre class="line-numbers language-none"><div class="caption"><span>[title] [lang:language] [url] [link text]</span></div><code class="language-none">&lt;script&gt;
+// 创建一个父类
+class Parent(){
+  constructor(props){
+    this.name = '沐华'
+  }
+}
+// 创建一个继承自父类的子类
+class Child extends Parent{
+  // props是继承过来的属性， myAttr是自己的属性
+  constructor(props, myAttr){
+    // 调用父类的构造函数，相当于获得父类的this指向
+    super(props)
+  }
+}
+console.log(new Child().name) // 沐华
+&lt;/script&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li><li><p>深拷贝:</p><pre class="line-numbers language-none"><div class="caption"><span>[title] [lang:language] [url] [link text]</span></div><code class="language-none">&lt;script&gt;
+// 用 while 写一个通用的遍历
+function myEach(array, iteratee) {
+    let index = -1;
+    const length = array.length;
+    while (++index &lt; length) {
+        iteratee(array[index], index);
+    }
+    return array;
+}
+function myClone(target, map = new WeakMap()){
+    // 引用类型才继续深拷贝 
+    if (target instanceof Object) {
+        const isArray = Array.isArray(target)
+        // 克隆对象和数组类型
+        let cloneTarget = isArray ? [] : {} 
+        
+        // 防止循环引用
+        if (map.get(target)) {
+            // 有拷贝记录就直接返回
+            return map.get(target) 
+        }
+        // 没有就存储拷贝记录
+        map.set(target,cloneTarget) 
+        
+        // 是对象就拿出同级的键集合  返回是数组格式
+        const keys = isArray ? undefined : Object.keys(target)
+        // value是对象的key或者数组的值 key是下标 
+        myEach(keys || target, (value, key) =&gt; { 
+            if (keys) {
+                // 是对象就把下标换成value
+                key = value 
+            }
+            // 递归
+            cloneTarget[key] = myClone(target[key], map) 
+        })
+        return cloneTarget
+    } else {
+        return target
+    }
+}
+&lt;/script&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li><li><p>获取数据类型:</p><pre class="line-numbers language-none"><div class="caption"><span>[title] [lang:language] [url] [link text]</span></div><code class="language-none">&lt;script&gt;
+function getType(value) {
+  if (value === null) {
+    return value + ""
+  }
+  if (typeof value === "object") {
+    // 数组、对象、null 用 typeof 都是 object，所以需要处理下 以 {} 为例
+    let valueClass = Object.prototype.toString.call(value) // 转成这样 [object, Object]
+    let type = valueClass.split(" ")[1].split("") // 变成这样 ["O", "b", "j", "e", "c", "t", "]"]
+    type.pop() // 再变成这样 ["O", "b", "j", "e", "c", "t"]
+    return type.join("").toLowerCase() // object
+  } else {
+    return typeof value;
+  }
+}
+console.log( getType(1) ) // number
+console.log( getType("1") ) // string
+console.log( getType(null) ) // null
+console.log( getType(undefined) ) // undefined 
+console.log( getType({}) ) // object
+console.log( getType(function(){}) ) // function 
+&lt;/script&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li><li><p>函数柯里化:<br>柯里化函数就是高阶函数的一种，好处主要是实现参数的复用和延迟执行，不过性能上就会没那么好，要创建数组存参数，要创建闭包，而且存取argements比存取命名参数要慢一点<br>实现 add(1)(2)(3) 要求参数不固定，类似 add(1)(2, 3, 4)(5)() 这样也行，我这实现的是中间的不能不传参数，最后一个不传参数，以此来区分是最后一次调用然后累计结果</p><pre class="line-numbers language-none"><div class="caption"><span>[title] [lang:language] [url] [link text]</span></div><code class="language-none">&lt;script&gt;
+// 每次调用的传进来的参数做累计处理
+function reduce (...args) {
+    return args.reduce((a, b) =&gt; a + b)
+}
+function currying (fn) {
+  // 存放每次调用的参数
+  let args = []
+  return function temp (...newArgs) {
+    if (newArgs.length) {
+      // 有参数就合并进去，然后返回自身
+      args = [ ...args, ...newArgs ]
+      return temp
+    } else {
+      // 没有参数了，也就是最后一个了，执行累计结果操作并返回结果
+      let val = fn.apply(this, args)
+      args = [] //保证再次调用时清空
+      return val
+    }
+  }
+}
+let add = currying(reduce)
+console.log(add(1)(2, 3, 4)(5)())  //15
+console.log(add(1)(2, 3)(4, 5)())  //15
+&lt;/script&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li><li><p>Promise:</p><pre class="line-numbers language-none"><div class="caption"><span>[title] [lang:language] [url] [link text]</span></div><code class="language-none">&lt;script&gt;
+class MyPromise {
+  constructor(fn){
+    // 存储 reslove 回调函数列表
+    this.callbacks = []
+    const resolve = (value) =&gt; {
+      this.data = value // 返回值给后面的 .then
+      while(this.callbacks.length) {
+        let cb = this.callbacks.shift()
+        cb(value)
+      }
+    }
+    fn(resolve)
+  }
+  then(onResolvedCallback) {
+    return new MyPromise((resolve) =&gt; {
+      this.callbacks.push(() =&gt; {
+        const res = onResolvedCallback(this.data)
+        if (res instanceof MyPromise) {
+          res.then(resolve)
+        } else {
+          resolve(res)
+        }
+      })
+    })
+  }
+}
+// 这是测试案例
+new MyPromise((resolve) =&gt; {
+  setTimeout(() =&gt; {
+    resolve(1)
+  }, 1000)
+}).then((res) =&gt; {
+    console.log(res)
+    return new MyPromise((resolve) =&gt; {
+      setTimeout(() =&gt; {
+        resolve(2)
+      }, 1000)
+    })
+}).then(res =&gt;{console.log(res)})
+&lt;/script&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>实现个极简版的，只有 resolve 和 then 方法，可以无限 .then</p></li><li><p>Promise.all:<br>Promise.all 可以把多个 Promise 实例打包成一个新的 Promise 实例。传进去一个值为多个 Promise 对象的数组，<br>成功的时候返回一个结果的数组，返回值的顺序和传进去的顺序是一致对应得上的，如果失败的话就返回最先 reject<br>状态的值如果遇到需要同时发送多个请求并且按顺序返回结果的话，Promise.all就可以完美解决这个问题</p><pre class="line-numbers language-none"><div class="caption"><span>[title] [lang:language] [url] [link text]</span></div><code class="language-none">&lt;script&gt;
+MyPromise.all = function (promisesList) {
+  let arr = []
+  return new MyPromise((resolve, reject) =&gt; {
+    if (!promisesList.length) resolve([])
+    // 直接循环同时执行传进来的promise
+    for (const promise of promisesList) {
+      promise.then((res) =&gt; {
+        // 保存返回结果
+        arr.push(res)
+        if (arr.length === promisesList.length) {
+          // 执行结束 返回结果集合
+          resolve(arr)
+        }
+      }, reject)
+    }
+  })
+}
+&lt;/script&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li><li><p>Promise.race:<br>传参和上面的 all 一模一样，传入一个 Promise 实例集合的数组，然后全部同时执行，<br>谁先快先执行完就返回谁，只返回一个结果</p><pre class="line-numbers language-none"><div class="caption"><span>[title] [lang:language] [url] [link text]</span></div><code class="language-none">&lt;script&gt;
+MyPromise.race = function(promisesList) {
+  return new MyPromise((resolve, reject) =&gt; {
+    // 直接循环同时执行传进来的promise
+    for (const promise of promisesList) {
+      // 直接返回出去了，所以只有一个，就看哪个快
+      promise.then(resolve, reject)
+    }
+  })
+}
+&lt;/script&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li><li><p>双向数据绑定:</p><pre class="line-numbers language-none"><div class="caption"><span>[title] [lang:language] [url] [link text]</span></div><code class="language-none">&lt;script&gt;
+let obj = {}
+let input = document.getElementById('input')
+let box = document.getElementById('box')
+// 数据劫持
+Object.defineProperty(obj, 'text', {
+  configurable: true,
+  enumerable: true,
+  get() {
+    // 获取数据就直接拿
+    console.log('获取数据了')
+  },
+  set(newVal) {
+    // 修改数据就重新赋值
+    console.log('数据更新了')
+    input.value = newVal
+    box.innerHTML = newVal
+  }
+})
+// 输入监听
+input.addEventListener('keyup', function(e) {
+  obj.text = e.target.value
+})
+&lt;/script&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li><li><p>路由:</p><pre class="line-numbers language-none"><div class="caption"><span>[title] [lang:language] [url] [link text]</span></div><code class="language-none">&lt;script&gt;
+// 简易版的 hash 路由
+class myRoute{
+  constructor(){
+    // 路由存储对象
+    this.routes = {}
+    // 当前hash
+    this.currentHash = ''
+    // 绑定this，避免监听时this指向改变
+    this.freshRoute = this.freshRoute.bind(this)
+    // 监听
+    window.addEventListener('load', this.freshRoute, false)
+    window.addEventListener('hashchange', this.freshRoute, false)
+  }
+  // 存储
+  storeRoute (path, cb) {
+    this.routes[path] = cb || function () {}
+  }
+  // 更新
+  freshRoute () {
+    this.currentHash = location.hash.slice(1) || '/'
+    this.routes[this.currentHash]()
+  }
+}
+&lt;/script&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li></ol></div><hr><div class="reprint" id="reprint-statement"><div class="reprint__author"><span class="reprint-meta" style="font-weight:700"><i class="fas fa-user">文章作者: </i></span><span class="reprint-info"><a href="/about" rel="external nofollow noreferrer">sola</a></span></div><div class="reprint__type"><span class="reprint-meta" style="font-weight:700"><i class="fas fa-link">文章链接: </i></span><span class="reprint-info"><a href="https://zq-sola-github-io.vercel.app/posts/2486.html">https://zq-sola-github-io.vercel.app/posts/2486.html</a></span></div><div class="reprint__notice"><span class="reprint-meta" style="font-weight:700"><i class="fas fa-copyright">版权声明: </i></span><span class="reprint-info">本博客所有文章除特別声明外，均采用 <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a> 许可协议。转载请注明来源 <a href="/about" target="_blank">sola</a> !</span></div></div><script async defer>function navToReprintStatement(){$("html, body").animate({scrollTop:$("#reprint-statement").offset().top-80},800)}document.addEventListener("copy",function(t){M.toast({html:'<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>'})})</script><div class="tag_share" style="display:block"><div class="post-meta__tag-list" style="display:inline-block"><div class="article-tag"><a href="/tags/blog/"><span class="chip bg-color">blog</span> </a><a href="/tags/hexo/"><span class="chip bg-color">hexo</span></a></div></div><div class="post_share" style="zoom:80%;width:fit-content;display:inline-block;float:right;margin:-.15rem 0"><link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css"><div id="article-share"><div class="social-share" data-sites="qq,wechat,qzone" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div><script src="/libs/share/js/social-share.min.js"></script></div></div></div></div></div><link rel="stylesheet" type="text/css" href="/css/detail/valine.css"><div class="card valine-card" data-aos="fade-up"><div class="comment_headling" style="font-size:20px;font-weight:700;position:relative;padding-left:20px;top:15px;padding-bottom:5px">📣 <span>评论</span></div><div id="vcomments" class="card-content" style="display:grid"></div></div><div id="to_comment" class="comment-scroll"><a class="btn-floating btn-large waves-effect waves-light" href="#vcomments" title="直达评论"><i class="fas fa-comments"></i></a></div><script src="/libs/valine/av-min.js"></script><script src="/libs/valine/Valine.min.js"></script><script>let metaPlaceholder={nick:"昵称/QQ号(必填)",mail:"邮箱(必填)",link:"网址(https://)"};new Valine({el:"#vcomments",appId:"YXeb914FHCUxqnsMmdSdEBH8-gzGzoHsz",appKey:"x9otrJzq2NCHpyW9qLYw9uYD",notify:!0,verify:!0,visitor:!0,avatar:"monsterid",pageSize:"10",lang:"zh-CN",placeholder:"留下你的足迹..",meta:["nick","mail","link"],recordIP:!0,enableQQ:"monsterid",requiredFields:["89ca9fc627d42e188b31660e338bf03f","7021c3626ea74a66f99a96eb37940cf2"],master:["89ca9fc627d42e188b31660e338bf03f","7021c3626ea74a66f99a96eb37940cf2"],friends:["89ca9fc627d42e188b31660e338bf03f","7021c3626ea74a66f99a96eb37940cf2","68c4c9e1b9a3d34317dc6faefe2ea00e"],tagMeta:["博主","小伙伴","访客"],metaPlaceholder:metaPlaceholder})</script><article id="prenext-posts" class="prev-next articles"><div class="row article-row"><div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up"><div class="article-badge left-badge text-color"><i class="far fa-dot-circle"></i>&nbsp;本篇</div><div class="card"><a href="/posts/2486.html"><div class="card-image"><img src="/medias/article/n2.jpg" class="responsive-img" alt="JS高频代码"> <span class="card-title">JS高频代码</span></div></a><div class="card-content article-content"><div class="summary block-with-text">JS高频代码</div><div class="publish-info"><span class="publish-date"><i class="far fa-clock fa-fw icon-date"></i>2021-08-11 </span><span class="publish-author"><i class="fas fa-bookmark fa-fw icon-category"></i> <a href="/categories/Blog/" class="post-category">Blog</a></span></div></div><div class="card-action article-tags"><a href="/tags/blog/"><span class="chip bg-color">blog</span> </a><a href="/tags/hexo/"><span class="chip bg-color">hexo</span></a></div></div></div><div class="article col s12 m6" data-aos="fade-up"><div class="article-badge right-badge text-color">下一篇&nbsp;<i class="fas fa-chevron-right"></i></div><div class="card"><a href="/posts/2485.html"><div class="card-image"><img src="/medias/article/n1.jpg" class="responsive-img" alt="Vue父子组件的双向绑定"> <span class="card-title">Vue父子组件的双向绑定</span></div></a><div class="card-content article-content"><div class="summary block-with-text">使用v-model实现父子组件的双向绑定</div><div class="publish-info"><span class="publish-date"><i class="far fa-clock fa-fw icon-date"></i>2021-08-11 </span><span class="publish-author"><i class="fas fa-bookmark fa-fw icon-category"></i> <a href="/categories/Blog/" class="post-category">Blog</a></span></div></div><div class="card-action article-tags"><a href="/tags/blog/"><span class="chip bg-color">blog</span> </a><a href="/tags/hexo/"><span class="chip bg-color">hexo</span></a></div></div></div></div></article></div><script>$("#articleContent").on("copy",function(e){var n,t,o,l;void 0!==window.getSelection&&((""+(n=window.getSelection())).length<Number.parseInt("120")||(t=document.getElementsByTagName("body")[0],(o=document.createElement("div")).style.position="absolute",o.style.left="-99999px",t.appendChild(o),o.appendChild(n.getRangeAt(0).cloneContents()),"PRE"===n.getRangeAt(0).commonAncestorContainer.nodeName&&(o.innerHTML="<pre>"+o.innerHTML+"</pre>"),l=document.location.href,o.innerHTML+='<br />来源: 热爱生活 | sola | sola Blog<br />文章作者: sola<br />文章链接: <a href="'+l+'">'+l+"</a><br />本文章著作权归作者所有，任何形式的转载都请注明出处。",n.selectAllChildren(o),window.setTimeout(function(){t.removeChild(o)},200)))})</script><link rel="stylesheet" type="text/css" href="/libs/prism/prism.css"><script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script><script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script><script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script></div><div id="toc-aside" class="expanded col l3 hide-on-med-and-down"><div class="toc-widget card"><div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div><div id="toc-content"></div></div></div></div><div id="floating-toc-btn" class="hide-on-med-and-down"><a class="btn-floating btn-large bg-color"><i class="fas fa-list-ul"></i></a></div><script src="/libs/tocbot/tocbot.min.js"></script><script>$(function(){tocbot.init({tocSelector:"#toc-content",contentSelector:"#articleContent",headingsOffset:-(.4*$(window).height()-45),collapseDepth:Number("0"),headingSelector:"h2, h3, h4"});let t=0;var e="toc-heading-";$("#toc-content a").each(function(){$(this).attr("href","#"+e+ ++t)}),t=0,$("#articleContent").children("h2, h3, h4").each(function(){$(this).attr("id",e+ ++t)});var n=parseInt(.4*$(window).height()-64);let o=$(".toc-widget");$(window).scroll(function(){var t=$(window).scrollTop();n<t?o.addClass("toc-fixed"):o.removeClass("toc-fixed")});var i="expanded";let a=$("#toc-aside"),c=$("#main-content");$("#floating-toc-btn .btn-floating").click(function(){a.hasClass(i)?(a.removeClass(i).hide(),c.removeClass("l9")):(a.addClass(i).show(),c.addClass("l9")),function(t,e){let n=$("#"+t);if(0!==n.length){let t=n.width();450<=t?t+=21:350<=t&&t<450?t+=18:300<=t&&t<350?t+=16:t+=14,$("#"+e).width(t)}}("artDetail","prenext-posts")})})</script></main><div id="bg"><canvas></canvas><canvas></canvas><canvas></canvas></div><script src="/js/dark.js"></script><script src="/js/canva.js"></script><footer class="page-footer bg-color"><div class="container row center-align" style="margin-bottom:0!important"><div class="col s12 m6 l6 copy-right">Copyright&nbsp;&copy; <span id="year">2020-2021</span> <a href="/about" target="_blank">sola</a> |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a><br>&nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span class="white-color">3.5k</span>&nbsp;<br><span id="sitetime">载入运行时间...</span><script>function siteTime(){var e=36e5,t=24*e,n=new Date,o="2020",r=n.getFullYear(),a=n.getMonth()+1,i=n.getDate(),l=n.getHours(),m=n.getMinutes(),M=n.getSeconds(),n=Date.UTC(o,"10","29","0","0","0"),i=Date.UTC(r,a,i,l,m,M)-n,l=Math.floor(i/31536e6),m=Math.floor(i/t-365*l),M=Math.floor((i-(365*l+m)*t)/e),n=Math.floor((i-(365*l+m)*t-M*e)/6e4),e=Math.floor((i-(365*l+m)*t-M*e-6e4*n)/1e3);o==r?(document.getElementById("year").innerHTML=r,document.getElementById("sitetime").innerHTML="本站已运营 "+m+" 年 "+M+" 小时 "+n+" 分钟 "+e+" 秒"):(document.getElementById("year").innerHTML=o+" - "+r,document.getElementById("sitetime").innerHTML="本站已运营 "+l+" 年 "+m+" 天 "+M+" 小时 "+n+" 分钟 "+e+" 秒")}setInterval(siteTime,1e3)</script><br></div></div></footer><div class="progress-bar"></div><div id="searchModal" class="modal"><div class="modal-content"><div class="search-header"><span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span> <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字" class="search-input"></div><div id="searchResult"></div></div></div><script type="text/javascript">$(function(){searchFunc("/search.xml","searchInput","searchResult")})</script><div id="backTop" class="top-scroll" title="回到顶部"><a class="btn-floating btn-large waves-effect waves-light" href="#!"><i class="fas fa-arrow-up"></i></a></div><a onclick="switchNightMode()" id="sma" title="模式切换"><i class="fa fa-moon-o" id="nightMode" aria-hidden="true"></i></a><script src="/libs/materialize/materialize.min.js"></script><script src="/libs/masonry/masonry.pkgd.min.js"></script><script src="/libs/aos/aos.js"></script><script src="/libs/scrollprogress/scrollProgress.min.js"></script><script src="/libs/lightGallery/js/lightgallery-all.min.js"></script><script src="/js/islu.js"></script><script src="/libs/search/search.js"></script><script data-ad-client="ca-pub-9875299461913117" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script src="/libs/others/clicklove.js" async></script><script async src="/libs/others/busuanzi.pure.mini.js"></script><script src="/libs/instantpage/instantpage.js" type="module"></script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({pluginRootPath:"live2dw/",pluginJsPath:"lib/",pluginModelPath:"assets/",tagMode:!1,log:!1,model:{jsonPath:"/live2dw/assets/tororo.model.json"},display:{superSample:2,position:"right",width:150,height:300,hOffset:75,vOffset:-20},mobile:{show:!0,scale:.5},react:{opacity:.7},name:{canvas:"live2dcanvas",div:"live2d-widget"},dev:{border:!1},dialog:{enable:!1,hitokoto:!1}})</script><script>window.imageLazyLoadSetting={isSPA:!1,preloadRatio:1,processImages:null}</script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})})</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var e=r[a],t=e,n=function(){r=r.filter(function(t){return e!==t})},i=new Image,o=t.getAttribute("data-original");i.onload=function(){t.src=o,n()},t.src!==o&&(i.src=o)}()}o(),n.addEventListener("scroll",function(){var t=o,e=n;clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this)</script></body></html>
